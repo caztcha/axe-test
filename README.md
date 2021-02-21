@@ -73,7 +73,7 @@ $ node axe-test.js => result.csv
  const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']).analyze();
  ```
 
-`withTags()` の中に `['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']` と記述してあり、WCAG 2.0 および 2.1 の、達成基準レベル A および AA に相当するテストルールを適用して、自動テストを実行する設定になっています。(加えて、一般的なアクセシビリティのベストプラクティスに関するテストルールも、適用する設定にしています。)　必要に応じて `withTags()` の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation の 「Axe-core Tags」のセクション](https://www.deque.com/axe/core-documentation/api-documentation/#axe-core-tags) をご参照ください。
+`withTags()` の中に `['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']` と記述してあり、WCAG 2.1 (および 2.0) の、達成基準レベル A と AA に相当するテストルールを適用して、自動テストを実行する設定にしています。(加えて、一般的なアクセシビリティのベストプラクティスに関するテストルールも、適用する設定にしています。)　必要に応じて `withTags()` の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation の 「Axe-core Tags」のセクション](https://www.deque.com/axe/core-documentation/api-documentation/#user-content-axe-core-tags) をご参照ください。
 
 
 
