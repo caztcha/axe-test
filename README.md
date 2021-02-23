@@ -71,7 +71,7 @@ $ node axe-test.js => result.csv
 
 ### テスト基準の設定変更について
 
- 「axe-test.js」では、下記の行で、テスト基準を設定しています。
+ 「[axe-test.js](https://github.com/caztcha/axe-test/blob/main/axe-test.js)」では、下記の行 (45行目) で、テスト基準を設定しています。
 ```
  const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']).analyze();
  ```
