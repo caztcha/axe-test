@@ -38,7 +38,7 @@ $ npm install @axe-core/puppeteer
 $ npm install axe-reports
 ```
 
-上記で作成したフォルダ (例 : デスクトップ上の「axe-test」フォルダ) の中に、「node_modules」というフォルダが作成され、その中に「puppeteer」「@axe-core」「axe-core」「axe-reports」が格納されていればOKです。
+上記で作成したフォルダ (例 : デスクトップ上の「axe-test」フォルダ) の中に、「node_modules」というフォルダが作成され、その中に「puppeteer」「@axe-core」「axe-reports」が格納されていればOKです。
 
 ## アクセシビリティ自動テストの実行のしかた
 
