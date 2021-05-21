@@ -11,14 +11,13 @@
 [Node.js のサイト](https://nodejs.org/ja/)から、Node.js のインストーラーをお使いのパソコンにダウンロードし、実行します。Node.js と npm (Node Package Manager) がインストールされます。
 
 インストール完了後、ターミナル (コマンドプロンプト) で、以下を入力し、バージョンが表示されればOKです。
+「$」記号は、実際には入力しません。以下、同様です。
 ```
 $ node -v
 ```
 ```
 $ npm -v
 ```
-
-// なお、実際の入力時は、「$」記号はタイプしません。以後、同様です。
 
 ### Puppeteer、axe-core、axe-reports のインストール
 
@@ -48,7 +47,7 @@ $ npm install axe-reports
 
 上記で作成したアクセシビリティ自動テストを実行するためのフォルダ (例 : デスクトップ上の「axe-test」フォルダ) の中に、この GitHub リポジトリにある「[axe-test.js](https://github.com/caztcha/axe-test/blob/main/axe-test.js)」を置きます。複数のプロジェクトでアクセシビリティ自動テストを実施する場合は、プロジェクトごとに下位フォルダ (サブディレクトリ) を作成し、その中に「axe-test.js」を置く形でも結構です。
 
-「axe-test.js」を置いたフォルダの同階層に、テスト対象となる URL 一覧を記載したテキストファイルを作成し、「urls.txt」というファイル名で保存します。テキストファイルの中身は、1行ごとに1つのURLを記述しただけのものにしてください。Basic 認証が適用されているページに対してテストを実行する場合は、URL の記述を `https://userid:password@example.com/foo/bar/index.html` という具合にします。
+「axe-test.js」を置いたフォルダの同階層に、テスト対象となる URL 一覧を記載したテキストファイルを作成し、「urls.txt」というファイル名で保存します。テキストファイルの中身は、1行ごとに1つのURLを記述しただけのものにしてください。なお、Basic 認証が適用されているページに対してテストを実行する場合は、URL の記述を `https://userid:password@example.com/foo/bar/index.html` という具合にします。
 
 ### 「axe-test.js」の実行
 
