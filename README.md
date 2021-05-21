@@ -48,7 +48,7 @@ $ npm install axe-reports
 上記で作成したアクセシビリティ自動テストを実行するためのフォルダ (例 : デスクトップ上の「axe-test」フォルダ) の中に、この GitHub リポジトリにある「[axe-test.js](https://github.com/caztcha/axe-test/blob/main/axe-test.js)」を置きます。複数のプロジェクトでアクセシビリティ自動テストを実施する場合は、プロジェクトごとに下位フォルダ (サブディレクトリ) を作成し、その中に「axe-test.js」を置く形でも結構です。
 
 「axe-test.js」を置いたフォルダの同階層に、テスト対象となる URL 一覧を記載したテキストファイルを作成し、「urls.txt」というファイル名で保存します。テキストファイルの中身は、1行ごとに1つのURLを記述しただけのものにしてください。<br>
-(なお、Basic 認証が適用されているページに対してテストを実行する場合は、URL を `https://userid:password@example.com/` という具合に記述します。)
+(なお、Basic 認証が適用されているページに対してテストを実行する場合は、各行の URL 記述を `https://userid:password@example.com/` という具合にします。)
 
 ### 「axe-test.js」の実行
 
