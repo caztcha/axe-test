@@ -43,7 +43,7 @@ urls_list = urls_list.split(',');
     // withTagsの設定オプションの詳細は公式ドキュメントを参照: https://www.deque.com/axe/core-documentation/api-documentation/#user-content-axe-core-tags
     const results = await new AxePuppeteer(page)
       .configure(config)
-      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice'])
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']) // Originally .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice'])
       .analyze();
 
     // axe-reports で、検証結果の行を追加する。
