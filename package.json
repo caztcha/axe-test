@@ -1,0 +1,23 @@
+{
+  "name": "axe-test",
+  "version": "1.0.0",
+  "description": "axe-core を利用して、ウェブサイトのアクセシビリティ自動テストを一括的に実行するためのスクリプトです。Node.js ライブラリ「Puppeteer」と併せて使います。Forked from https://github.com/caztcha/axe-test",
+  "main": "axe-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttsukagoshi/axe-test.git"
+  },
+  "author": "ttsukagoshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ttsukagoshi/axe-test/issues"
+  },
+  "homepage": "https://github.com/ttsukagoshi/axe-test#readme",
+  "dependencies": {
+    "@axe-core/puppeteer": "^4.3.2",
+    "axe-reports": "^1.1.11"
+  }
+}
