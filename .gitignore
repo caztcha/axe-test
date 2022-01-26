@@ -1,2 +1,6 @@
 # Node.js
 node_modules/
+
+# axe-test
+urls.txt
+result.csv
