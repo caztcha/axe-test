@@ -2,9 +2,9 @@ const { AxePuppeteer } = require('@axe-core/puppeteer');
 const puppeteer = require('puppeteer');
 
 // テスト結果を日本語で出力するように設定する。
-const AXE_LOCALE_JA = require('axe-core/locales/ja.json');
+// const AXE_LOCALE_JA = require('axe-core/locales/ja.json');
 const config = {
-  locale: AXE_LOCALE_JA,
+  // locale: AXE_LOCALE_JA,
 };
 
 // テスト結果の出力に、axe-reports を使用するように設定する。
