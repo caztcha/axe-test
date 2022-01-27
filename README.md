@@ -24,7 +24,7 @@
 npm ci
 ```
 
-## アクセシビリティ自動テストの実行のしかた
+## アクセシビリティ自動テストを実行する
 
 ### 対象 URL リストを作業フォルダ内で作成
 
@@ -39,18 +39,28 @@ npm ci
 node . => ./debug/results.csv
 ```
 
-` => ./debug/results.csv` と記述することで、テスト結果がスプレッドシート (.csv ファイル) に出力されます。なお、.csv のファイル名は、必ずしも「**results.csv**」である必要はなく、任意のもので構いません。ちなみに ` => ./debug/results.csv` の記述がない場合、テスト結果はターミナル (コマンドプロンプト) 内に出力されます。
+` => ./debug/results.csv` と記述することで、テスト結果が `debug` フォルダ内のスプレッドシート (.csv ファイル) に出力されます。なお、.csv のファイル名は、必ずしも「**results.csv**」である必要はなく、任意のもので構いません。ちなみに ` => ./debug/results.csv` の記述がない場合、テスト結果はターミナル (コマンドプロンプト) 内に出力されます。
 
 テストの実行には少し時間がかかると思います (数百ページ規模だと、数十分かかるかもしれません) が、完了すると、テストを実行したフォルダの中に .csv ファイルが生成されます。あとはこれを Excel や Google スプレッドシートで開いて、適宜ご活用ください。
 
 <img width="1294" alt="「axe-test.js」によって出力されたテスト結果 (.csv) のイメージ" src="https://user-images.githubusercontent.com/17394690/108782594-32fb7900-75af-11eb-9d3c-df336d43dc0f.png">
 
-### テスト基準の設定変更について
+### テスト基準の設定変更
 
-「[axe-test.js](https://github.com/caztcha/axe-test/blob/main/axe-test.js)」では、下記の行 (45 行目) で、テスト基準を設定しています。
+「[.src/axe-test.js](https://github.com/ttsukagoshi/axe-test/blob/main/src/axe-test.js)」では、冒頭のユーザ設定で、テスト基準を設定しています。
 
+```javascript
+const axeCoreTags = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];
 ```
- const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']).analyze();
+
+WCAG 2.1 (および 2.0) の、達成基準レベル A と AA に相当するテストルールを適用して、テストを実行する設定ということです。必要に応じて上記 1 行の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation の 「Axe-core Tags」のセクション](https://www.deque.com/axe/core-documentation/api-documentation/#user-content-axe-core-tags) をご参照ください。
+
+### テスト結果として出力する項目の調整
+
+「[.src/axe-test.js](https://github.com/ttsukagoshi/axe-test/blob/main/src/axe-test.js)」では、冒頭のユーザ設定で、テスト結果として出力する項目を定義しています。
+
+```javascript
+const resultTypes = ['incomplete', 'violations'];
 ```
 
-`withTags()` の中に `['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']` と記述してあり、WCAG 2.1 (および 2.0) の、達成基準レベル A と AA に相当するテストルールを適用して、自動テストを実行する設定にしています。(加えて、一般的なアクセシビリティのベストプラクティスに関するテストルールも、適用する設定にしています。) 必要に応じて `withTags()` の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation の 「Axe-core Tags」のセクション](https://www.deque.com/axe/core-documentation/api-documentation/#user-content-axe-core-tags) をご参照ください。
+現状では `incomplete` （適合しているか判断できなかった基準）と `violations` （適合していないと判断された基準）を返す設定となっています。
