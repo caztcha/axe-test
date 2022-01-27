@@ -2,7 +2,7 @@
   "name": "axe-test",
   "version": "1.0.0",
   "description": "axe-core を利用して、ウェブサイトのアクセシビリティ自動テストを一括的に実行するためのスクリプトです。Node.js ライブラリ「Puppeteer」と併せて使います。Forked from https://github.com/caztcha/axe-test",
-  "main": "axe-test.js",
+  "main": "src/axe-test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
