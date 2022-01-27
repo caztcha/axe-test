@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "puppeteer": "^10.x",
-    "@axe-core/puppeteer": "^4.3.2",
-    "axe-reports": "^1.1.11"
+    "@axe-core/puppeteer": "^4.3.2"
   }
 }
