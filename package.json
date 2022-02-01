@@ -1,6 +1,6 @@
 {
   "name": "axe-test",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "axe-core を利用して、ウェブサイトのアクセシビリティ自動テストを一括的に実行するためのスクリプトです。Node.js ライブラリ「Puppeteer」と併せて使います。Forked from https://github.com/caztcha/axe-test",
   "main": "src/axe-test.js",
   "scripts": {
