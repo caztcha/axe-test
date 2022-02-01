@@ -41,11 +41,11 @@ node .
 
 テストの実行には少し時間がかかると思います（数百ページ規模だと、数十分かかるかもしれません）。`アクセシビリティ検査が完了しました。` と表示されれば検査完了です。作業フォルダ直下に `axe-results.csv` という.csv ファイルが生成されます。あとはこれを Excel や Google スプレッドシートで開いて、適宜ご活用ください。
 
-<img width="1294" alt="「axe-test.js」によって出力されたテスト結果 (.csv) のイメージ" src="https://user-images.githubusercontent.com/17394690/108782594-32fb7900-75af-11eb-9d3c-df336d43dc0f.png">
+<img width="1294" alt="「axe-test.js」によって出力されたテスト結果 (.csv) のイメージ" src="https://user-images.githubusercontent.com/55706659/151901139-a87e171b-c37d-4938-867d-14183982eb1d.png">
 
 ### テスト基準の設定変更
 
-「[.src/axe-test.js](https://github.com/ttsukagoshi/axe-test/blob/main/src/axe-test.js)」では、冒頭のユーザ設定で、テスト基準を設定しています。
+「[./src/axe-test.js](https://github.com/ttsukagoshi/axe-test/blob/main/src/axe-test.js)」では、冒頭のユーザ設定で、テスト基準を設定しています。
 
 ```javascript
 const axeCoreTags = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];
@@ -55,7 +55,7 @@ WCAG 2.1 (および 2.0) の、達成基準レベル A と AA に相当するテ
 
 ### テスト結果として出力する項目の調整
 
-「[.src/axe-test.js](https://github.com/ttsukagoshi/axe-test/blob/main/src/axe-test.js)」では、冒頭のユーザ設定で、テスト結果として出力する項目を定義しています。
+「[./src/axe-test.js](https://github.com/ttsukagoshi/axe-test/blob/main/src/axe-test.js)」では、冒頭のユーザ設定で、テスト結果として出力する項目を定義しています。
 
 ```javascript
 const resultTypes = ['incomplete', 'violations'];
