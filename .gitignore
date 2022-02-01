@@ -3,7 +3,5 @@ node_modules/
 
 # axe-test
 urls.txt
-result.csv
-
-# Debug
+axe-results.csv
 debug/
