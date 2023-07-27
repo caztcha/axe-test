@@ -30,6 +30,9 @@ $ cd desktop/axe-test
 
 その状態で、[Puppeteer](https://pptr.dev/)、[axe-core (Puppeteer 用)](https://www.npmjs.com/package/@axe-core/puppeteer)、[axe-reports](https://www.npmjs.com/package/axe-reports) をそれぞれ、以下のようにターミナル (コマンドプロンプト) で入力して、インストールします。
 ```
+$ npm init
+```
+```
 $ npm install puppeteer --no-save
 ```
 ```
