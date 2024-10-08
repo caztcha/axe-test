@@ -47,7 +47,7 @@ $ npm install axe-reports
 
 上記で作成したアクセシビリティ自動テストを実行するためのフォルダ (例 : デスクトップ上の「axe-test」フォルダ) の中に、この GitHub リポジトリにある「[axe-test.js](https://github.com/caztcha/axe-test/blob/main/axe-test.js)」を置きます。複数のプロジェクトでアクセシビリティ自動テストを実施する場合は、プロジェクトごとに下位フォルダ (サブディレクトリ) を作成し、その中に「axe-test.js」を置く形でも結構です。
 
-「axe-test.js」を置いたフォルダの同階層に、テスト対象となる URL 一覧を記載したテキストファイルを作成し、「urls.txt」というファイル名で保存します。テキストファイルの中身は、1行ごとに1つのURLを記述しただけのものにしてください。<br>
+「axe-test.js」を置いたフォルダの同階層に、テスト対象となる URL 一覧を記載したテキストファイルを作成し、「urls.txt」というファイル名で保存します。テキストファイルの中身は、1行ごとに一つのURLを記述しただけのものにしてください (空行は含めないようにしてください)。<br>
 (なお、Basic 認証が適用されているページに対してテストを実行する場合は、各行の URL 記述を `https://userid:password@example.com/` という具合にします。)
 
 ### 「axe-test.js」の実行
@@ -62,7 +62,7 @@ $ cd desktop/axe-test
 $ node axe-test.js => result.csv
 ```
 
-`node axe-test.js` の記述は、「.js」を省いて `node axe-test` と記述する形でもOKです。
+`node axe-test.js` の記述は、「.js」を省いて `node axe-test` と記述する形でも OK です。
 
 ` => result.csv` と記述することで、テスト結果がスプレッドシート (.csv ファイル) に出力されます。なお、.csv のファイル名は、必ずしも「result.csv」である必要はなく、任意のもので構いません。ちなみに ` => result.csv` の記述がない場合、テスト結果はターミナル (コマンドプロンプト) 内に出力されます。
 
@@ -75,10 +75,10 @@ $ node axe-test.js => result.csv
 
  「[axe-test.js](https://github.com/caztcha/axe-test/blob/main/axe-test.js)」では、下記の行 (45行目) で、テスト基準を設定しています。
 ```
- const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']).analyze();
+ const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']).analyze();
  ```
 
-`withTags()` の中に `['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']` と記述してあり、WCAG 2.1 (および 2.0) の、達成基準レベル A と AA に相当するテストルールを適用して、自動テストを実行する設定にしています。(加えて、一般的なアクセシビリティのベストプラクティスに関するテストルールも、適用する設定にしています。)　必要に応じて `withTags()` の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation の 「Axe-core Tags」のセクション](https://www.deque.com/axe/core-documentation/api-documentation/#user-content-axe-core-tags) をご参照ください。
+`withTags()` の中に `['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']` と記述してあり、WCAG 2.0、2.1、2.2 の、達成基準レベル A および AA に相当するテストルールを適用して、自動テストを実行する設定にしています。(加えて、一般的なアクセシビリティのベストプラクティスに関するテストルールも、適用する設定にしています。)　必要に応じて `withTags()` の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation](https://www.deque.com/axe/core-documentation/api-documentation/) の「Axe-core Tags」のセクションをご参照ください。
 
 
 
