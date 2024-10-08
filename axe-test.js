@@ -42,7 +42,7 @@ urls_list = urls_list.split(',');
 		]);
 		
 		// テストを実行する。withTags で、テスト基準をいろいろ設定できる。
-		const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']).analyze();
+		const results = await new AxePuppeteer(page).configure(config).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']).analyze();
 		
 		// axe-reports で、検証結果の行を追加する。
 		AxeReports.createCsvReportRow(results);
