@@ -79,7 +79,9 @@ $ node axe-test.js => result.csv
 
 `withTags()` の中に `['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']` と記述してあり、WCAG 2.0、2.1、2.2 の、達成基準レベル A および AA に相当するテストルールを適用して、自動テストを実行する設定にしています。(加えて、一般的なアクセシビリティのベストプラクティスに関するテストルールも、適用する設定にしています。)　必要に応じて `withTags()` の記述を変更することで、テスト基準の設定を変更することができます。ここに記述可能なタグについては、[axe API Documentation](https://www.deque.com/axe/core-documentation/api-documentation/) の「Axe-core Tags」のセクションをご参照ください。
 
+## テスト結果と WCAG 達成基準の対照
 
+テスト結果 (.csv ファイル) の各行に記載された個々のアクセシビリティ問題 (axe-core ルール) が、WCAG (Web Content Accessibility Guidelines) のどの達成基準に関連するのかを見やすくするために、「[axe-core ルールと WCAG 2.2 達成基準の対照表](https://github.com/caztcha/axe-wcag-table)」をご用意しました。併せてご活用いただけますと幸いです。
 
 
 
