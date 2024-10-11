@@ -85,6 +85,10 @@ $ node axe-test.js => result.csv
 
 テスト結果 (.csv ファイル) の各行に記載された個々のアクセシビリティ問題 (axe-core ルール) が、WCAG (Web Content Accessibility Guidelines) のどの達成基準に関連するのかを見やすくするために、「[axe-core ルールと WCAG 2.2 達成基準の対照表](https://github.com/caztcha/axe-wcag-table)」をご用意しました。併せてご活用いただけますと幸いです。
 
+---
+
+以上
+
 
 
 
