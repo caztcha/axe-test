@@ -69,7 +69,7 @@ $ node axe-test.js => result.csv
 
 テストの実行には少し時間がかかると思います (数百ページ規模だと、数十分かかるかもしれません) が、完了すると、テストを実行したフォルダの中に .csv ファイルが生成されます。あとはこれを Excel や Google スプレッドシートで開いて、適宜ご活用ください。
 
-<img width="1294" alt="「axe-test.js」によって出力されたテスト結果 (.csv) のイメージ" src="https://user-images.githubusercontent.com/17394690/108782594-32fb7900-75af-11eb-9d3c-df336d43dc0f.png">
+<img width="1294" alt="「axe-test.js」によって出力されたテスト結果 (.csv) のイメージ" src="https://github.com/user-attachments/assets/33ae6b6a-0ac0-483e-bdb8-9bd9b1216a0a">
 
 
 ### テスト基準の設定変更について
